@@ -907,6 +907,10 @@ cmd.add({"remotespam", "exhaust"}, {"remotespam <number>", "Repeatedly fire all 
 	end))
 end)
 
+cmd.add({"topkek"},{"topkek", "loads topkek v4 script"}, function(n) 
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TigarFX/ManticoreStudio/master/topkek"))()
+end)
+
 cmd.add({"unspam", "unlag", "unchatspam", "unanimlag", "unremotespam"}, {"unspam", "Stop all attempts to lag/spam"}, function()
 	lib.disconnect("spam")
 end)
@@ -2183,6 +2187,7 @@ cmd.add({"goto", "to", "tp", "teleport"}, {"goto <player/X,Y,Z>", "Teleport to t
 		end
 	end
 end)
+
 
 cmd.add({"watch", "view"}, {"watch <player>", "Watch the given player"}, function(p)
 	local players = argument.getPlayers(p)
